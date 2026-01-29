@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Pro Game Site</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- МЕНЮ -->
+<div id="menu">
+  <button onclick="openPage('home')">🏠 Главная</button>
+  <button onclick="openPage('games')">🎮 Игры</button>
+  <button onclick="openPage('keste')">📅 Кесте</button>
+  <button onclick="openPage('about')">ℹ️ О нас</button>
+  <button onclick="toggleMusic()">🎵 Музыка</button>
+</div>
+
+<!-- ГЛАВНАЯ -->
+<section id="home" class="page active">
+  <h1>Добро пожаловать</h1>
+  <input id="nick" placeholder="Введите ник">
+  <button onclick="saveNick()">Сохранить ник</button>
+  <p id="nickView"></p>
+</section>
+
+<!-- ИГРЫ -->
+<section id="games" class="page">
+  <h2>🎮 Игры</h2>
+
+  <!-- КНБ -->
+  <h3>Камень Ножницы Бумага</h3>
+  <div class="rps">
+    <button onclick="playRPS('rock')">🪨</button>
+    <button onclick="playRPS('scissors')">✂️</button>
+    <button onclick="playRPS('paper')">🧻</button>
+  </div>
+  <p id="rpsResult"></p>
+
+  <hr>
+
+  <!-- Крестики Нолики -->
+  <h3>Крестики Нолики</h3>
+  <div id="ttt" class="ttt"></div>
+  <p id="tttStatus"></p>
+</section>
+
+<!-- КЕСТЕ -->
+<section id="keste" class="page">
+  <h2>📅 Кесте</h2>
+  <div class="day-tabs">
+    <button onclick="showDay(1)">1 день</button>
+    <button onclick="showDay(2)">2 день</button>
+    <button onclick="showDay(3)">3 день</button>
+    <button onclick="showDay(4)">4 день</button>
+    <button onclick="showDay(5)">5 день</button>
+  </div>
+  <div id="dayContent" class="day-content"></div>
+</section>
+
+<!-- О НАС -->
+<section id="about" class="page">
+  <h2>О нас</h2>
+  <p>Разработчик: <b>Temirtasov</b></p>
+  <a href="https://www.instagram.com/r_temirtasov_" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+  </a>
+</section>
+
+<!-- ФОН -->
+<audio id="music" loop src="music.mp3"></audio>
+<script src="app.js"></script>
+</body>
+</html>
